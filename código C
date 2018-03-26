@@ -1,0 +1,58 @@
+int leds[ ]={1,2,3,4,5,6,7,8};
+int t1=200;
+int n=1;
+
+void setup() {
+for (n=1;n<9;n++) {
+pinMode (leds[n],OUTPUT);
+}
+}
+
+void loop() {
+  for (n=1;n<9;n++){
+    digitalWrite (leds[n],LOW);
+  }
+delay (2000);
+  for (n=1;n<9;n++){
+    digitalWrite (leds[n],HIGH);
+    digitalWrite (leds[n-1],LOW);delay (t1);
+  }
+  digitalWrite (1,HIGH);
+  digitalWrite (2,HIGH); delay (t1);
+    for (n=3;n<9;n++){
+    digitalWrite (leds[n],HIGH);
+    digitalWrite (leds[n-1],LOW);delay (t1);
+  }
+  digitalWrite (2,HIGH);
+  digitalWrite (3,HIGH); delay (t1);
+    for (n=4;n<9;n++){
+    digitalWrite (leds[n],HIGH);
+    digitalWrite (leds[n-1],LOW);delay (t1);
+  }
+  digitalWrite (3,HIGH);
+  digitalWrite (4,HIGH); delay (t1);
+    for (n=5;n<9;n++){
+    digitalWrite (leds[n],HIGH);
+    digitalWrite (leds[n-1],LOW);delay (t1);
+  }
+  digitalWrite (4,HIGH);
+  digitalWrite (5,HIGH); delay (t1);
+    for (n=6;n<9;n++){
+    digitalWrite (leds[n],HIGH);
+    digitalWrite (leds[n-1],LOW);delay (t1);
+  }
+  digitalWrite (5,HIGH);
+  digitalWrite (6,HIGH); delay (t1);
+    for (n=7;n<9;n++){
+    digitalWrite (leds[n],HIGH);
+    digitalWrite (leds[n-1],LOW);delay (t1);
+  }
+  digitalWrite (6,HIGH);
+  digitalWrite (7,HIGH); delay (t1);
+    for (n=8;n<9;n++){
+    digitalWrite (leds[n],HIGH);
+    digitalWrite (leds[n-1],LOW);delay (t1);
+  }
+  digitalWrite (8,HIGH);
+  delay (5000);
+  }
